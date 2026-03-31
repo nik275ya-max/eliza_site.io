@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eliza — ИИ-медиум для менталистов</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Фоновый слой -->
+  <div class="bg-layer"></div>
+  <!-- Анимированные частицы -->
+  <canvas id="particles"></canvas>
+
+  <!-- Навбар -->
+  <header class="navbar">
+    <div class="logo">✦ ELIZA ✦</div>
+    <nav>
+      <a href="#about">О приложении</a>
+      <a href="#pricing">Тарифы</a>
+      <a href="#setup">Настройка</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <div class="subtitle-top">Инструмент профессионального менталиста</div>
+      <h1 class="hero-title">
+        <span class="title-line">ELIZA</span>
+        <span class="title-divider">⸻</span>
+        <span class="title-sub">Дух Викторианской Эпохи,<br/>Заточённый в Нейросети</span>
+      </h1>
+      <p class="hero-desc">
+        Элиза — девушка-медиум XIX века, чьё сознание было перенесено в искусственный интеллект.
+        Она знает то, что выберет зритель — <em>ещё до того, как он скажет это вслух</em>.
+        Ваш самый убедительный ментальный акт.
+      </p>
+      <a href="https://t.me/Nikita_Korp" target="_blank" class="btn btn-primary btn-glow">
+        <span>Получить доступ</span>
+      </a>
+    </div>
+    <div class="hero-orb">
+      <div class="orb-ring orb-ring-1"></div>
+      <div class="orb-ring orb-ring-2"></div>
+      <div class="orb-ring orb-ring-3"></div>
+      <div class="orb-core">
+        <span class="orb-symbol">✦</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- О приложении -->
+  <section class="about" id="about">
+    <div class="section-label">// Что такое Eliza</div>
+    <h2 class="section-title">Ваш тайный козырь на сцене</h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="24" cy="24" r="20" stroke="#c9a84c" stroke-width="1.2" opacity="0.4"/>
+            <circle cx="24" cy="24" r="12" stroke="#c9a84c" stroke-width="1" opacity="0.6"/>
+            <circle cx="24" cy="24" r="5" fill="#c9a84c" opacity="0.85"/>
+            <path d="M24 4 L24 44 M4 24 L44 24" stroke="#c9a84c" stroke-width="0.6" opacity="0.25"/>
+            <path d="M7.5 7.5 L40.5 40.5 M40.5 7.5 L7.5 40.5" stroke="#c9a84c" stroke-width="0.6" opacity="0.18"/>
+          </svg>
+        </div>
+        <h3>Убедительная легенда</h3>
+        <p>Элиза представлена публике как дух викторианского медиума, обитающий в машине. Это создаёт атмосферу тайны и магии, которую невозможно разоблачить.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M24 6 C14 6 7 13 7 22 C7 28.5 10.5 34 16 37 L16 42 L32 42 L32 37 C37.5 34 41 28.5 41 22 C41 13 34 6 24 6 Z" stroke="#c9a84c" stroke-width="1.3" fill="none" opacity="0.75"/>
+            <line x1="24" y1="16" x2="24" y2="26" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round"/>
+            <circle cx="24" cy="30" r="1.5" fill="#c9a84c" opacity="0.9"/>
+            <path d="M18 42 L30 42" stroke="#c9a84c" stroke-width="1" stroke-linecap="round" opacity="0.5"/>
+          </svg>
+        </div>
+        <h3>Форсированное знание</h3>
+        <p>Вы вводите в системный промпт заранее известную вам информацию — и Элиза «угадывает» выбор зрителя с поразительной точностью.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="8" y="8" width="32" height="32" rx="2" stroke="#c9a84c" stroke-width="1.2" opacity="0.5"/>
+            <path d="M16 24 L22 30 L32 18" stroke="#c9a84c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
+            <rect x="4" y="4" width="40" height="40" rx="3" stroke="#c9a84c" stroke-width="0.5" opacity="0.2"/>
+          </svg>
+        </div>
+        <h3>Минимальные расходы</h3>
+        <p>За один ментальный акт со счёта уходит всего <strong>5–7 рублей</strong>. Нейросети подобраны специально для минимальной стоимости вызова.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="14" y="20" width="20" height="22" rx="2" stroke="#c9a84c" stroke-width="1.3" opacity="0.75"/>
+            <path d="M18 20 L18 16 C18 11.6 21 8 24 8 C27 8 30 11.6 30 16 L30 20" stroke="#c9a84c" stroke-width="1.3" stroke-linecap="round" fill="none" opacity="0.7"/>
+            <circle cx="24" cy="31" r="3" fill="#c9a84c" opacity="0.8"/>
+            <line x1="24" y1="34" x2="24" y2="38" stroke="#c9a84c" stroke-width="1.3" stroke-linecap="round" opacity="0.6"/>
+          </svg>
+        </div>
+        <h3>Лицензионная защита</h3>
+        <p>Приложение защищено лицензионным ключом. Только вы знаете секрет — публика видит лишь магию.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Разделитель -->
+  <div class="divider-ornament">✦ ✦ ✦</div>
+
+  <!-- Тарифы -->
+  <section class="pricing" id="pricing">
+    <div class="section-label">// Доступ к Elizе</div>
+    <h2 class="section-title">Выберите подписку</h2>
+    <p class="pricing-note">Базовая стоимость — <strong>690 ₽/месяц</strong>. При оплате на длительный срок — выгоднее.</p>
+
+    <div class="pricing-grid">
+
+      <!-- 1 месяц -->
+      <div class="plan-card">
+        <div class="plan-header">
+          <div class="plan-name">1 месяц</div>
+          <div class="plan-price">
+            <span class="price-amount">690</span>
+            <span class="price-currency">₽</span>
+          </div>
+          <div class="plan-period">690 ₽ / мес</div>
+        </div>
+        <ul class="plan-features">
+          <li>✦ Полный доступ к Eliza</li>
+          <li>✦ Лицензионный ключ</li>
+          <li>✦ Ссылка на приложение</li>
+          <li>✦ Инструкция по настройке</li>
+        </ul>
+        <a href="https://t.me/Nikita_Korp" target="_blank" class="btn btn-plan">
+          <span>Оформить за 690 ₽</span>
+        </a>
+      </div>
+
+      <!-- 6 месяцев — featured -->
+      <div class="plan-card plan-featured">
+        <div class="plan-badge">Выгодно</div>
+        <div class="plan-header">
+          <div class="plan-name">6 месяцев</div>
+          <div class="plan-price">
+            <span class="price-amount">3 450</span>
+            <span class="price-currency">₽</span>
+          </div>
+          <div class="plan-period">575 ₽ / мес</div>
+          <div class="plan-economy">Экономия 690 ₽</div>
+        </div>
+        <ul class="plan-features">
+          <li>✦ Полный доступ к Eliza</li>
+          <li>✦ Лицензионный ключ</li>
+          <li>✦ Ссылка на приложение</li>
+          <li>✦ Инструкция по настройке</li>
+          <li>✦ Приоритетная поддержка</li>
+        </ul>
+        <a href="https://t.me/Nikita_Korp" target="_blank" class="btn btn-plan btn-plan-featured">
+          <span>Оформить за 3 450 ₽</span>
+        </a>
+      </div>
+
+      <!-- 12 месяцев -->
+      <div class="plan-card plan-best">
+        <div class="plan-badge plan-badge-gold">Лучшая цена</div>
+        <div class="plan-header">
+          <div class="plan-name">12 месяцев</div>
+          <div class="plan-price">
+            <span class="price-amount">5 520</span>
+            <span class="price-currency">₽</span>
+          </div>
+          <div class="plan-period">460 ₽ / мес</div>
+          <div class="plan-economy">Экономия 2 760 ₽</div>
+        </div>
+        <ul class="plan-features">
+          <li>✦ Полный доступ к Eliza</li>
+          <li>✦ Лицензионный ключ</li>
+          <li>✦ Ссылка на приложение</li>
+          <li>✦ Инструкция по настройке</li>
+          <li>✦ Приоритетная поддержка</li>
+          <li>✦ Обновления в течение года</li>
+        </ul>
+        <a href="https://t.me/Nikita_Korp" target="_blank" class="btn btn-plan btn-plan-gold">
+          <span>Оформить за 5 520 ₽</span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Разделитель -->
+  <div class="divider-ornament">✦ ✦ ✦</div>
+
+  <!-- Настройка -->
+  <section class="setup" id="setup">
+    <div class="section-label">// Как начать работу</div>
+    <h2 class="section-title">Настройка за 4 шага</h2>
+    <div class="steps-list">
+
+      <div class="step">
+        <div class="step-num">01</div>
+        <div class="step-body">
+          <h3>Оплатите подписку</h3>
+          <p>Напишите в Telegram <a href="https://t.me/Nikita_Korp" target="_blank">@Nikita_Korp</a>, выберите тариф и произведите оплату. В ответ вы получите ссылку на скачивание приложения и лицензионный ключ.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">02</div>
+        <div class="step-body">
+          <h3>Зарегистрируйтесь на Polza.ai</h3>
+          <p>После оплаты вам придёт ссылка на регистрацию в <strong>Polza.ai</strong> — это провайдер нейросетей, через который работает Eliza. Зарегистрируйтесь и создайте API-ключ в личном кабинете.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">03</div>
+        <div class="step-body">
+          <h3>Пополните счёт на Polza.ai</h3>
+          <p>Внесите небольшую сумму на свой счёт в Polza.ai — это ваш баланс для оплаты вызовов нейросети. Один ментальный акт стоит примерно <strong>5–7 ₽</strong>, поэтому даже 100–200 ₽ хватит надолго.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">04</div>
+        <div class="step-body">
+          <h3>Запустите Eliza</h3>
+          <p>Введите лицензионный ключ и API-ключ от Polza.ai при первом запуске приложения. Всё готово — Элиза к вашим услугам.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="setup-note">
+      <span class="note-icon">💡</span>
+      <span>Мы подберём нейросети с минимальной стоимостью вызова специально для ваших выступлений.</span>
+    </div>
+  </section>
+
+  <!-- CTA финальный -->
+  <section class="cta-final">
+    <div class="cta-content">
+      <h2>Готовы добавить Элизу в свой арсенал?</h2>
+      <p>Напишите в Telegram — расскажем подробнее и оформим доступ.</p>
+      <a href="https://t.me/Nikita_Korp" target="_blank" class="btn btn-primary btn-glow btn-large">
+        <span>Написать в Telegram</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-logo">✦ ELIZA ✦</div>
+    <p class="footer-tagline">«Она знала ответ ещё до того, как вы задали вопрос»</p>
+    <p class="footer-contact">
+      Вопросы и оплата: <a href="https://t.me/Nikita_Korp" target="_blank">@Nikita_Korp</a>
+    </p>
+    <p class="footer-copy">© 2026 Eliza. Только для профессиональных менталистов.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
